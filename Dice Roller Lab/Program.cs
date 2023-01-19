@@ -1,5 +1,5 @@
 ﻿
-        Console.WriteLine("Hello!  Welcome to the Dice Roller Game.\n");
+        Console.WriteLine("Hello!  Welcome to the Dice Roller Game.");
         int dice = 0;
 
         while (true)
@@ -57,9 +57,9 @@ while (roller)
             Console.WriteLine("Answer not valid. Try again.");
         }
     }
-   
 }
 Console.WriteLine("\nThanks for playing!");
+Console.ReadLine();
 
 static int GetRandom(int max)
 {
@@ -100,12 +100,10 @@ static string SixSum(int roll1, int roll2)
     }
     else if (roll1 + roll2 == 2 || roll1 + roll2 == 3 || roll1 + roll2 == 12)
     {
-        return "Craps! ";
+        return "Craps... ";
     }
     else
     {
         return "";
     }
 }
-
-Console.ReadLine();
