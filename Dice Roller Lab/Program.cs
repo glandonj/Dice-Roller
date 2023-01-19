@@ -36,7 +36,7 @@ while (roller)
     }
     else
     {
-        Console.WriteLine($"Your roll is: {roll1} & {roll2}");
+        Console.WriteLine($"{DoublesorOdd(roll1, roll2)}Your roll is: {roll1} & {roll2}, which makes {roll1+roll2}.");
     }
     while (true)
     {
@@ -101,6 +101,22 @@ static string SixSum(int roll1, int roll2)
     else if (roll1 + roll2 == 2 || roll1 + roll2 == 3 || roll1 + roll2 == 12)
     {
         return "Craps... ";
+    }
+    else
+    {
+        return "";
+    }
+}
+
+static string DoublesorOdd(int roll1, int roll2)
+{
+    if (roll1 == roll2)
+    {
+        return $"Double {roll1}'s! Way to go! ";
+    }
+    else if ((roll1 + roll2)%2 != 0)
+    {
+        return "Sum is odd! ";
     }
     else
     {
